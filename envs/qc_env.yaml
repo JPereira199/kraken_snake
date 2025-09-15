@@ -1,0 +1,11 @@
+name: qc_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - fastqc
+  - multiqc
+  - tqdm
+  - pandas
+  - python

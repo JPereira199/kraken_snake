@@ -1,0 +1,8 @@
+name: kraken2_env
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - kraken2
+  - python=3.10  # or adjust to match your system or script version

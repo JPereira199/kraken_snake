@@ -1,0 +1,52 @@
+########################################################
+###### Config file for Kraken2 snakemake pipeline ######
+########################################################
+
+# Input FASTQ samples dir
+samples.Dir: /media/Disco11/pperaza/pperaza/pperaza-novogene/toy_set
+metadata.File: /media/Disco9/jpereira/kraken_snake/metadata/toy_metadata.csv
+results.Dir: /media/Disco11/pperaza/pperaza/Results/kraken_snake/toy_set
+
+#Fastqc Analysis
+fastqc_analysis.rule: True
+fastqc_analysis_paired.threads: 6
+
+#Metadata validation
+metadata_validation.rule : True
+metadata_validation.file_separator: ','
+metadata_validation.sample_id_column:  'sample-id'
+metadata_validation.fill_nan_values: 'median'
+metadata_validation.paired: True
+
+#Fastp
+fastp.rule: True
+fastp.threads_fastp: 10
+fastp.jobs: 4
+
+#kraken2
+kraken2.rule: True
+kraken2.threads: 10
+#kraken2.kraken2_db: "/home/pperaza/NOVOGENE/db/"
+kraken2.kraken2_db: "/home/pperaza/RRS/db/"
+
+#Bracken
+bracken.rule: True
+bracken.bracken_db: /home/jpereira/kraken_snake/kraken_db/db
+bracken.read_length: 150
+bracken.level: S
+bracken.kraken_db_kmer: 35
+bracken.threads: 50
+
+#Merge Bracken
+merge_bracken.rule: True
+merge_bracken.level: 'S'
+merge_bracken.metrics:
+  - fraction_total_reads
+  - new_est_reads
+
+#DeSEQ2
+deseq2.rule: True
+deseq2.bracken_metric: 'fraction_total_reads'
+deseq2.bracken_level: 'S'
+deseq2.condition: 'group_col'
+deseq2.batch: ''

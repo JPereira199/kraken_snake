@@ -1,0 +1,62 @@
+# ---------------------------
+# Snakemake
+# ---------------------------
+.snakemake/
+.snakejob.*
+logs/
+checkpoints/
+report.html
+*.dag.pdf
+*.dot
+*.lock
+
+# Optional: results/ if you regenerate everything
+# results/
+# output/
+
+# ---------------------------
+# Python
+# ---------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+*.so
+*.log
+*.tmp
+
+# Virtual environments
+.env/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb~  # temp files from notebooks
+
+# ---------------------------
+# R
+# ---------------------------
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+.Rprofile
+.Rapp.history
+
+# ---------------------------
+# OS / Editor junk
+# ---------------------------
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# ---------------------------
+# Conda / environments
+# ---------------------------
+*.conda
+*.yaml~

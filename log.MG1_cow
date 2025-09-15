@@ -1,0 +1,912 @@
+Assuming unrestricted shared filesystem usage.
+host: torito
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+all                  1
+bracken              1
+deseq2               1
+fastp                1
+kraken2              1
+merge_bracken        1
+total                6
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul 28 02:15:41 2025]
+localrule fastp:
+    input: /media/Disco9/jpereira/kraken_snake/scripts/fastp_subsample_parallel_jobs.py, /media/Disco11/pperaza/pperaza/pperaza-novogene/metagem_data/dataset
+    output: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/.sentinel.fastp
+    log: logs/fastp.log
+    jobid: 3
+    reason: Missing output files: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/.sentinel.fastp
+    threads: 10
+    resources: tmpdir=/tmp
+Activating conda environment: .snakemake/conda/0d21b0e2b2e3ba9a76196295c6dc6a3d_
+[Mon Jul 28 02:41:59 2025]
+Finished jobid: 3 (Rule: fastp)
+1 of 6 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul 28 02:41:59 2025]
+localrule kraken2:
+    input: /media/Disco9/jpereira/kraken_snake/scripts/kraken2_paired.py, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp
+    output: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/.sentinel.kraken2
+    log: logs/kraken2.log
+    jobid: 4
+    reason: Missing output files: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/.sentinel.kraken2; Input files updated by another job: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp
+    threads: 10
+    resources: tmpdir=/tmp
+Activating conda environment: .snakemake/conda/152c22467a5f009320c8c44a80466492_
+Loading database information... done.
+20000000 sequences (5996.68 Mbp) processed in 114.680s (10463.9 Kseq/m, 3137.44 Mbp/m).
+  9818918 sequences classified (49.09%)
+  10181082 sequences unclassified (50.91%)
+Loading database information... done.
+20000000 sequences (5996.31 Mbp) processed in 101.421s (11831.9 Kseq/m, 3547.39 Mbp/m).
+  8362959 sequences classified (41.81%)
+  11637041 sequences unclassified (58.19%)
+Loading database information... done.
+20000000 sequences (5997.39 Mbp) processed in 118.806s (10100.5 Kseq/m, 3028.82 Mbp/m).
+  10364524 sequences classified (51.82%)
+  9635476 sequences unclassified (48.18%)
+Loading database information... done.
+20000000 sequences (5997.33 Mbp) processed in 116.628s (10289.1 Kseq/m, 3085.37 Mbp/m).
+  9348410 sequences classified (46.74%)
+  10651590 sequences unclassified (53.26%)
+Loading database information... done.
+20000000 sequences (5998.38 Mbp) processed in 121.062s (9912.3 Kseq/m, 2972.88 Mbp/m).
+  12191287 sequences classified (60.96%)
+  7808713 sequences unclassified (39.04%)
+Loading database information... done.
+20000000 sequences (5996.46 Mbp) processed in 116.036s (10341.6 Kseq/m, 3100.64 Mbp/m).
+  8118990 sequences classified (40.59%)
+  11881010 sequences unclassified (59.41%)
+Loading database information... done.
+20000000 sequences (5998.42 Mbp) processed in 120.681s (9943.5 Kseq/m, 2982.28 Mbp/m).
+  13313628 sequences classified (66.57%)
+  6686372 sequences unclassified (33.43%)
+Loading database information... done.
+20000000 sequences (5997.55 Mbp) processed in 116.892s (10265.9 Kseq/m, 3078.51 Mbp/m).
+  9446169 sequences classified (47.23%)
+  10553831 sequences unclassified (52.77%)
+Loading database information... done.
+20000000 sequences (5998.95 Mbp) processed in 117.591s (10204.9 Kseq/m, 3060.92 Mbp/m).
+  14509136 sequences classified (72.55%)
+  5490864 sequences unclassified (27.45%)
+Loading database information... done.
+20000000 sequences (5996.77 Mbp) processed in 114.321s (10496.7 Kseq/m, 3147.32 Mbp/m).
+  9024098 sequences classified (45.12%)
+  10975902 sequences unclassified (54.88%)
+Loading database information... done.
+20000000 sequences (5996.76 Mbp) processed in 97.702s (12282.2 Kseq/m, 3682.68 Mbp/m).
+  9321087 sequences classified (46.61%)
+  10678913 sequences unclassified (53.39%)
+Loading database information... done.
+20000000 sequences (5996.85 Mbp) processed in 101.840s (11783.2 Kseq/m, 3533.11 Mbp/m).
+  9545539 sequences classified (47.73%)
+  10454461 sequences unclassified (52.27%)
+
+🔬 Processing sample: PR26NR001MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR001MG/PR26NR001MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR001MG/PR26NR001MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR001MG/PR26NR001MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR001MG/PR26NR001MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR001MG
+
+🔬 Processing sample: PR26NR007MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR007MG/PR26NR007MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR007MG/PR26NR007MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR007MG/PR26NR007MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR007MG/PR26NR007MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR007MG
+
+🔬 Processing sample: PR26NR026MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR026MG/PR26NR026MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR026MG/PR26NR026MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR026MG/PR26NR026MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR026MG/PR26NR026MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR026MG
+
+🔬 Processing sample: PR26NR042MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR042MG/PR26NR042MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR042MG/PR26NR042MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR042MG/PR26NR042MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR042MG/PR26NR042MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR042MG
+
+🔬 Processing sample: PR26NR044MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR044MG/PR26NR044MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR044MG/PR26NR044MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR044MG/PR26NR044MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR044MG/PR26NR044MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR044MG
+
+🔬 Processing sample: PR26NR056MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR056MG/PR26NR056MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR056MG/PR26NR056MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR056MG/PR26NR056MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR056MG/PR26NR056MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR056MG
+
+🔬 Processing sample: PR26NR057MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR057MG/PR26NR057MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR057MG/PR26NR057MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR057MG/PR26NR057MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR057MG/PR26NR057MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR057MG
+
+🔬 Processing sample: PR26NR063MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR063MG/PR26NR063MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR063MG/PR26NR063MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR063MG/PR26NR063MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR063MG/PR26NR063MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR063MG
+
+🔬 Processing sample: PR26NR067MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR067MG/PR26NR067MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR067MG/PR26NR067MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR067MG/PR26NR067MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR067MG/PR26NR067MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR067MG
+
+🔬 Processing sample: PR26NR069MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR069MG/PR26NR069MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR26NR069MG/PR26NR069MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR069MG/PR26NR069MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR069MG/PR26NR069MG.kraken2.output
+✅ Kraken2 classification complete for PR26NR069MG
+
+🔬 Processing sample: PR27NT012MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT012MG/PR27NT012MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT012MG/PR27NT012MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT012MG/PR27NT012MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT012MG/PR27NT012MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT012MG
+
+🔬 Processing sample: PR27NT015MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT015MG/PR27NT015MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT015MG/PR27NT015MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT015MG/PR27NT015MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT015MG/PR27NT015MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT015MG
+
+🔬 Processing sample: PR27NT020MG
+Loading database information... done.
+20000000 sequences (5995.86 Mbp) processed in 94.358s (12717.5 Kseq/m, 3812.62 Mbp/m).
+  7129831 sequences classified (35.65%)
+  12870169 sequences unclassified (64.35%)
+Loading database information... done.
+20000000 sequences (5997.42 Mbp) processed in 98.994s (12121.9 Kseq/m, 3635.02 Mbp/m).
+  12666813 sequences classified (63.33%)
+  7333187 sequences unclassified (36.67%)
+Loading database information... done.
+20000000 sequences (5996.49 Mbp) processed in 94.479s (12701.3 Kseq/m, 3808.15 Mbp/m).
+  10452378 sequences classified (52.26%)
+  9547622 sequences unclassified (47.74%)
+Loading database information... done.
+20000000 sequences (5996.84 Mbp) processed in 94.230s (12734.8 Kseq/m, 3818.44 Mbp/m).
+  9643303 sequences classified (48.22%)
+  10356697 sequences unclassified (51.78%)
+Loading database information... done.
+20000000 sequences (5996.92 Mbp) processed in 94.239s (12733.5 Kseq/m, 3818.10 Mbp/m).
+  8436242 sequences classified (42.18%)
+  11563758 sequences unclassified (57.82%)
+Loading database information... done.
+20000000 sequences (5996.86 Mbp) processed in 93.183s (12877.9 Kseq/m, 3861.34 Mbp/m).
+  9408162 sequences classified (47.04%)
+  10591838 sequences unclassified (52.96%)
+Loading database information... done.
+20000000 sequences (5997.11 Mbp) processed in 95.569s (12556.4 Kseq/m, 3765.11 Mbp/m).
+  10109153 sequences classified (50.55%)
+  9890847 sequences unclassified (49.45%)
+Loading database information... done.
+20000000 sequences (5997.04 Mbp) processed in 94.191s (12740.1 Kseq/m, 3820.14 Mbp/m).
+  7889825 sequences classified (39.45%)
+  12110175 sequences unclassified (60.55%)
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT020MG/PR27NT020MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT020MG/PR27NT020MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT020MG/PR27NT020MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT020MG/PR27NT020MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT020MG
+
+🔬 Processing sample: PR27NT021MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT021MG/PR27NT021MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT021MG/PR27NT021MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT021MG/PR27NT021MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT021MG/PR27NT021MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT021MG
+
+🔬 Processing sample: PR27NT045MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT045MG/PR27NT045MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT045MG/PR27NT045MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT045MG/PR27NT045MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT045MG/PR27NT045MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT045MG
+
+🔬 Processing sample: PR27NT046MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT046MG/PR27NT046MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT046MG/PR27NT046MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT046MG/PR27NT046MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT046MG/PR27NT046MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT046MG
+
+🔬 Processing sample: PR27NT048MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT048MG/PR27NT048MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT048MG/PR27NT048MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT048MG/PR27NT048MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT048MG/PR27NT048MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT048MG
+
+🔬 Processing sample: PR27NT054MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT054MG/PR27NT054MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT054MG/PR27NT054MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT054MG/PR27NT054MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT054MG/PR27NT054MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT054MG
+
+🔬 Processing sample: PR27NT067MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT067MG/PR27NT067MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT067MG/PR27NT067MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT067MG/PR27NT067MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT067MG/PR27NT067MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT067MG
+
+🔬 Processing sample: PR27NT070MG
+ Running: kraken2 --db /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 --paired /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT070MG/PR27NT070MG_1.subsampled.fq.gz /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/PR27NT070MG/PR27NT070MG_2.subsampled.fq.gz --threads 10 --report /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT070MG/PR27NT070MG.kraken2.report --output /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT070MG/PR27NT070MG.kraken2.output
+✅ Kraken2 classification complete for PR27NT070MG
+
+✨ All samples processed successfully!
+[Mon Jul 28 03:49:46 2025]
+Finished jobid: 4 (Rule: kraken2)
+2 of 6 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul 28 03:49:46 2025]
+localrule bracken:
+    input: /media/Disco9/jpereira/kraken_snake/scripts/bracken_estimation.py, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2
+    output: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/.sentinel.bracken
+    log: logs/bracken.log
+    jobid: 5
+    reason: Missing output files: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/.sentinel.bracken; Input files updated by another job: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2
+    threads: 10
+    resources: tmpdir=/tmp
+Activating conda environment: .snakemake/conda/7c95b702b485ccb5acfb3fa4e4997194_
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR001MG/PR26NR001MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR007MG/PR26NR007MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR026MG/PR26NR026MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR042MG/PR26NR042MG.kraken2.report
+
+✅ Found existing Bracken k-mer distribution files in /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1, skipping build.
+
+🔬 Processing sample: PR26NR001MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR001MG/PR26NR001MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR001MG/PR26NR001MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR001MG/PR26NR001MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR001MG/PR26NR001MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:47
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR001MG/PR26NR001MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 9627566
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 191226
+	  >> Reads not distributed (eg. no genuses above threshold): 126
+	  >> Unclassified reads: 10181082
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR001MG/PR26NR001MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:48
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR001MG
+
+🔬 Processing sample: PR26NR007MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR007MG/PR26NR007MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR007MG/PR26NR007MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR007MG/PR26NR007MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR007MG/PR26NR007MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:48
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR007MG/PR26NR007MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 8169288
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 193464
+	  >> Reads not distributed (eg. no genuses above threshold): 207
+	  >> Unclassified reads: 11637041
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR007MG/PR26NR007MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:49
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR007MG
+
+🔬 Processing sample: PR26NR026MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR026MG/PR26NR026MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR026MG/PR26NR026MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR026MG/PR26NR026MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR026MG/PR26NR026MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:49
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR026MG/PR26NR026MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 10190143
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 174188
+	  >> Reads not distributed (eg. no genuses above threshold): 193
+	  >> Unclassified reads: 9635476
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR026MG/PR26NR026MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:50
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR026MG
+
+🔬 Processing sample: PR26NR042MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR042MG/PR26NR042MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR042MG/PR26NR042MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR042MG/PR26NR042MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR042MG/PR26NR042MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:50
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR042MG/PR26NR042MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 9159132
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 189145
+	  >> Reads not distributed (eg. no genuses above threshold): 133
+	  >> Unclassified reads: 10651590
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR042MG/PR26NR042MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:51
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR042MG
+
+🔬 Processing sample: PR26NR044MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR044MG/PR26NR044MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR044MG/PR26NR044MG.bracken.G.txt -r 150 -l G -t 10
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR044MG/PR26NR044MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR056MG/PR26NR056MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR057MG/PR26NR057MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR063MG/PR26NR063MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR067MG/PR26NR067MG.kraken2.report
+
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR044MG/PR26NR044MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR044MG/PR26NR044MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:51
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR044MG/PR26NR044MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 11965645
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 225483
+	  >> Reads not distributed (eg. no genuses above threshold): 159
+	  >> Unclassified reads: 7808713
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR044MG/PR26NR044MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:52
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR044MG
+
+🔬 Processing sample: PR26NR056MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR056MG/PR26NR056MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR056MG/PR26NR056MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR056MG/PR26NR056MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR056MG/PR26NR056MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:52
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR056MG/PR26NR056MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 7961919
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 156817
+	  >> Reads not distributed (eg. no genuses above threshold): 254
+	  >> Unclassified reads: 11881010
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR056MG/PR26NR056MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:53
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR056MG
+
+🔬 Processing sample: PR26NR057MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR057MG/PR26NR057MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR057MG/PR26NR057MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR057MG/PR26NR057MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR057MG/PR26NR057MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:53
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR057MG/PR26NR057MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 574 
+	  >> Number of genuses with reads < threshold: 1 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 13108981
+	  >> Total reads discarded (genuses reads < threshold): 9
+	  >> Reads distributed: 204472
+	  >> Reads not distributed (eg. no genuses above threshold): 166
+	  >> Unclassified reads: 6686372
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR057MG/PR26NR057MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:54
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR057MG
+
+🔬 Processing sample: PR26NR063MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR063MG/PR26NR063MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR063MG/PR26NR063MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR063MG/PR26NR063MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR063MG/PR26NR063MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:54
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR063MG/PR26NR063MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 9283488
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 162513
+	  >> Reads not distributed (eg. no genuses above threshold): 168
+	  >> Unclassified reads: 10553831
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR063MG/PR26NR063MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:55
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR063MG
+
+🔬 Processing sample: PR26NR067MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR067MG/PR26NR067MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR067MG/PR26NR067MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR067MG/PR26NR067MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR067MG/PR26NR067MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:55
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR067MG/PR26NR067MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 570 
+	  >> Number of genuses with reads < threshold: 5 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 14295163
+	  >> Total reads discarded (genuses reads < threshold): 19
+	  >> Reads distributed: 213749
+	  >> Reads not distributed (eg. no genuses above threshold): 205
+	  >> Unclassified reads: 5490864
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR067MG/PR26NR067MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:56
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR067MG
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR069MG/PR26NR069MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT012MG/PR27NT012MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT015MG/PR27NT015MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT020MG/PR27NT020MG.kraken2.report
+
+
+🔬 Processing sample: PR26NR069MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR069MG/PR26NR069MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR069MG/PR26NR069MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR069MG/PR26NR069MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR069MG/PR26NR069MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:56
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR26NR069MG/PR26NR069MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 8814272
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 209656
+	  >> Reads not distributed (eg. no genuses above threshold): 170
+	  >> Unclassified reads: 10975902
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR26NR069MG/PR26NR069MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:57
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR26NR069MG
+
+🔬 Processing sample: PR27NT012MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT012MG/PR27NT012MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT012MG/PR27NT012MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT012MG/PR27NT012MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT012MG/PR27NT012MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:57
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT012MG/PR27NT012MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 9158018
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 162971
+	  >> Reads not distributed (eg. no genuses above threshold): 98
+	  >> Unclassified reads: 10678913
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT012MG/PR27NT012MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:58
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT012MG
+
+🔬 Processing sample: PR27NT015MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT015MG/PR27NT015MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT015MG/PR27NT015MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT015MG/PR27NT015MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT015MG/PR27NT015MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:49:58
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT015MG/PR27NT015MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 9358067
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 187337
+	  >> Reads not distributed (eg. no genuses above threshold): 135
+	  >> Unclassified reads: 10454461
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT015MG/PR27NT015MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:49:59
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT015MG
+
+🔬 Processing sample: PR27NT020MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT020MG/PR27NT020MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT020MG/PR27NT020MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT020MG/PR27NT020MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT020MG/PR27NT020MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:50:00
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT020MG/PR27NT020MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 6980101
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 149641
+	  >> Reads not distributed (eg. no genuses above threshold): 89
+	  >> Unclassified reads: 12870169
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT020MG/PR27NT020MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:50:00
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT020MG
+
+🔬 Processing sample: PR27NT021MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT021MG/PR27NT021MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT021MG/PR27NT021MG.bracken.G.txt -r 150 -l G -t 10
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT021MG/PR27NT021MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT045MG/PR27NT045MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT046MG/PR27NT046MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT048MG/PR27NT048MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT054MG/PR27NT054MG.kraken2.report
+
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT021MG/PR27NT021MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT021MG/PR27NT021MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:50:01
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT021MG/PR27NT021MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 12465232
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 201442
+	  >> Reads not distributed (eg. no genuses above threshold): 139
+	  >> Unclassified reads: 7333187
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT021MG/PR27NT021MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:50:02
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT021MG
+
+🔬 Processing sample: PR27NT045MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT045MG/PR27NT045MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT045MG/PR27NT045MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT045MG/PR27NT045MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT045MG/PR27NT045MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:50:02
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT045MG/PR27NT045MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 572 
+	  >> Number of genuses with reads < threshold: 3 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 10326183
+	  >> Total reads discarded (genuses reads < threshold): 17
+	  >> Reads distributed: 126112
+	  >> Reads not distributed (eg. no genuses above threshold): 66
+	  >> Unclassified reads: 9547622
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT045MG/PR27NT045MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:50:03
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT045MG
+
+🔬 Processing sample: PR27NT046MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT046MG/PR27NT046MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT046MG/PR27NT046MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT046MG/PR27NT046MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT046MG/PR27NT046MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:50:03
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT046MG/PR27NT046MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 574 
+	  >> Number of genuses with reads < threshold: 1 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 9488831
+	  >> Total reads discarded (genuses reads < threshold): 8
+	  >> Reads distributed: 154393
+	  >> Reads not distributed (eg. no genuses above threshold): 71
+	  >> Unclassified reads: 10356697
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT046MG/PR27NT046MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:50:04
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT046MG
+
+🔬 Processing sample: PR27NT048MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT048MG/PR27NT048MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT048MG/PR27NT048MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT048MG/PR27NT048MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT048MG/PR27NT048MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:50:04
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT048MG/PR27NT048MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 575 
+	  >> Number of genuses with reads < threshold: 0 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 8258195
+	  >> Total reads discarded (genuses reads < threshold): 0
+	  >> Reads distributed: 177906
+	  >> Reads not distributed (eg. no genuses above threshold): 141
+	  >> Unclassified reads: 11563758
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT048MG/PR27NT048MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:50:05
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT048MG
+
+🔬 Processing sample: PR27NT054MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT054MG/PR27NT054MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT054MG/PR27NT054MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT054MG/PR27NT054MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT054MG/PR27NT054MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:50:05
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT054MG/PR27NT054MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 572 
+	  >> Number of genuses with reads < threshold: 3 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 9282938
+	  >> Total reads discarded (genuses reads < threshold): 20
+	  >> Reads distributed: 125142
+	  >> Reads not distributed (eg. no genuses above threshold): 62
+	  >> Unclassified reads: 10591838
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT054MG/PR27NT054MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:50:06
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT054MG
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT067MG/PR27NT067MG.kraken2.report
+
+>> Checking report file: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT070MG/PR27NT070MG.kraken2.report
+
+
+🔬 Processing sample: PR27NT067MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT067MG/PR27NT067MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT067MG/PR27NT067MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT067MG/PR27NT067MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT067MG/PR27NT067MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:50:06
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT067MG/PR27NT067MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 574 
+	  >> Number of genuses with reads < threshold: 1 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 9947646
+	  >> Total reads discarded (genuses reads < threshold): 8
+	  >> Reads distributed: 161363
+	  >> Reads not distributed (eg. no genuses above threshold): 136
+	  >> Unclassified reads: 9890847
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT067MG/PR27NT067MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:50:07
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT067MG
+
+🔬 Processing sample: PR27NT070MG
+ Running: bracken -d /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1 -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT070MG/PR27NT070MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT070MG/PR27NT070MG.bracken.G.txt -r 150 -l G -t 10
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT070MG/PR27NT070MG.kraken2.report -o /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT070MG/PR27NT070MG.bracken.G.txt -k /media/Disco11/pperaza/pperaza/pperaza-novogene/MG2/kraken2_db_cow-rumen_v1.0.1/database150mers.kmer_distrib -l G -t 10
+PROGRAM START TIME: 07-28-2025 06:50:07
+BRACKEN SUMMARY (Kraken report: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/PR27NT070MG/PR27NT070MG.kraken2.report)
+    >>> Threshold: 10 
+    >>> Number of genuses in sample: 575 
+	  >> Number of genuses with reads > threshold: 574 
+	  >> Number of genuses with reads < threshold: 1 
+    >>> Total reads in sample: 20000000
+	  >> Total reads kept at genuses level (reads > threshold): 7755934
+	  >> Total reads discarded (genuses reads < threshold): 6
+	  >> Reads distributed: 133809
+	  >> Reads not distributed (eg. no genuses above threshold): 76
+	  >> Unclassified reads: 12110175
+BRACKEN OUTPUT PRODUCED: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/PR27NT070MG/PR27NT070MG.bracken.G.txt
+PROGRAM END TIME: 07-28-2025 06:50:08
+  Bracken complete.
+
+✅ Bracken abundance estimation complete for PR27NT070MG
+
+✨ Bracken estimation completed successfully for all samples!
+[Mon Jul 28 03:50:08 2025]
+Finished jobid: 5 (Rule: bracken)
+3 of 6 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul 28 03:50:08 2025]
+localrule merge_bracken:
+    input: /media/Disco9/jpereira/kraken_snake/scripts/merge_bracken_tables.py, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken
+    output: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken/.sentinel.merge_bracken
+    log: logs/merge_bracken.log
+    jobid: 6
+    reason: Missing output files: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken/.sentinel.merge_bracken, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken; Input files updated by another job: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken
+    resources: tmpdir=/tmp
+Activating conda environment: .snakemake/conda/3863e92810b1cd1d0bace0a2ad869440_
+✅ Merged Bracken table saved to: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken/bracken_merged_G_fraction_total_reads.csv
+✅ Merged Bracken table saved to: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken/bracken_merged_G_new_est_reads.csv
+[Mon Jul 28 03:50:11 2025]
+Finished jobid: 6 (Rule: merge_bracken)
+4 of 6 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul 28 03:50:11 2025]
+localrule deseq2:
+    input: /media/Disco9/jpereira/kraken_snake/scripts/deseq2_differential_abundance.R, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Metadata/metadata.tsv
+    output: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2/.sentinel.deseq2
+    log: logs/deseq2.log
+    jobid: 7
+    reason: Missing output files: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2/.sentinel.deseq2; Input files updated by another job: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken
+    resources: tmpdir=/tmp
+Activating conda environment: .snakemake/conda/f720076cef1cfc43e071f89c79ced9ee_
+[1] "Head Counts: "
+           PR26NR001MG PR26NR007MG PR26NR026MG PR26NR042MG PR26NR044MG
+Prevotella     2800930     2867237     4859701     3147579     4495825
+UBA4293         343750       74009      155899       72086      148177
+UBA4372         169845      225725      175246      140658      245772
+UBA2918         107852       58308       75176       11536       17754
+UBA4334          90548       28921       56077       66219       82272
+UBA1179          35614        6646       22646       15919       24514
+           PR26NR056MG PR26NR057MG PR26NR063MG PR26NR067MG PR26NR069MG
+Prevotella     2715655     4400280     4662840     4424082     2564900
+UBA4293         113464        9100      283657       40946       15955
+UBA4372         170335      162947      191546      144643      182639
+UBA2918          17008       31677       15275       27133       99707
+UBA4334         212396       42349       44133       51183       28994
+UBA1179          33345       13385       64470        7120       43965
+           PR27NT012MG PR27NT015MG PR27NT020MG PR27NT021MG PR27NT045MG
+Prevotella     3743646     2684585     2641306     6102853     5066994
+UBA4293           1152       54668       18459       22442        4008
+UBA4372         260409      273204      301976      358245      201598
+UBA2918          75077       27368       29670       43249      166340
+UBA4334          46276       68738       66479      109045       35405
+UBA1179           9476       10546       17576       10241        4165
+           PR27NT046MG PR27NT048MG PR27NT054MG PR27NT067MG PR27NT070MG
+Prevotella     3383232     3051179     4120075     4504744     2696592
+UBA4293          17116       33598         505        5501       17118
+UBA4372         281085      221528      231815      267512      295707
+UBA2918          36045       19834      154018       89677       91731
+UBA4334          44601       65777       34144       27855       20502
+UBA1179           8459        8269        3092       10532        9432
+[1] "Opt Values"
+$counts
+[1] "/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken/bracken_merged_G_new_est_reads.csv"
+
+$metadata
+[1] "/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2/deseq2_metadata.tsv"
+
+$condition
+[1] "Dieta"
+
+$`min-counts`
+[1] 10
+
+$`sample-names`
+[1] "sample-id"
+
+$output
+[1] "/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2"
+
+$help
+[1] FALSE
+
+[1] "Column Names For Metadata: "
+ [1] "sample-id"         "absolute-filepath" "EID"              
+ [4] "Prueba"            "Dieta"             "Categoria"        
+ [7] "Anio"              "Corral"            "CARAVANA"         
+[10] "RP"                "DMI_tot_Mean"      "slope"            
+[13] "promPesos"         "metPMP"            "EG_fin"           
+[16] "residuo_T"         "Pheno_RFI_medioSD" "RA_DMP"           
+[19] "Vis"               "Days"              "MeI_BW"           
+[22] "MeI_ADG"           "MeY_DMI"           "Pheno_MeY"        
+[25] "Ym_IPCC"          
+[1] "Head Metadata: "
+                                                                           absolute-filepath
+PR27NT070MG /media/Disco11/pperaza/pperaza/pperaza-novogene/metagem_data/dataset/PR27NT070MG
+PR27NT048MG /media/Disco11/pperaza/pperaza/pperaza-novogene/metagem_data/dataset/PR27NT048MG
+PR26NR001MG /media/Disco11/pperaza/pperaza/pperaza-novogene/metagem_data/dataset/PR26NR001MG
+PR27NT067MG /media/Disco11/pperaza/pperaza/pperaza-novogene/metagem_data/dataset/PR27NT067MG
+PR26NR026MG /media/Disco11/pperaza/pperaza/pperaza-novogene/metagem_data/dataset/PR26NR026MG
+PR27NT045MG /media/Disco11/pperaza/pperaza/pperaza-novogene/metagem_data/dataset/PR27NT045MG
+                     EID Prueba Dieta Categoria Anio Corral CARAVANA   RP
+PR27NT070MG 8.580001e+14     27     E         N    2      A       70 7322
+PR27NT048MG 8.580001e+14     27     E         N    2      A       48 7446
+PR26NR001MG 8.580001e+14     26     R         N    2      A        1 7356
+PR27NT067MG 8.580001e+14     27     E         N    2      A       67 7434
+PR26NR026MG 8.580001e+14     26     R         N    2      A       26 7305
+PR27NT045MG 8.580001e+14     27     E         N    2      A       45 7497
+            DMI_tot_Mean slope promPesos metPMP EG_fin residuo_T
+PR27NT070MG        11.35  1.44     537.3  110.4   12.2    -0.713
+PR27NT048MG        13.96  1.94     532.6  110.9   14.4     0.756
+PR26NR001MG        11.47  1.44     376.5   85.4    1.8     0.656
+PR27NT067MG         9.36  1.54     477.6  101.0   13.2    -2.240
+PR26NR026MG         9.69  1.19     388.0   87.3    3.6    -0.925
+PR27NT045MG        14.16  1.73     538.8  110.4   14.9     1.382
+            Pheno_RFI_medioSD RA_DMP Vis Days MeI_BW MeI_ADG MeY_DMI Pheno_MeY
+PR27NT070MG   High_Efficiency 259.51 123   53   0.48  180.24   22.87  High_MeY
+PR27NT048MG    Low_Efficiency 261.23 157   59   0.49  134.81   18.71   Low_MeY
+PR26NR001MG    Low_Efficiency 196.74 135   58   0.52  136.26   17.16   Low_MeY
+PR27NT067MG   High_Efficiency 209.38 114   51   0.44  135.62   22.38  High_MeY
+PR26NR026MG   High_Efficiency 234.25  47   19   0.60  197.26   24.17  High_MeY
+PR27NT045MG    Low_Efficiency 248.53  59   39   0.46  143.36   17.55   Low_MeY
+            Ym_IPCC
+PR27NT070MG    8.00
+PR27NT048MG    6.50
+PR26NR001MG    5.86
+PR27NT067MG    7.85
+PR26NR026MG    8.31
+PR27NT045MG    6.08
+Sample counts by condition:
+
+ E  R 
+10 10 
+converting counts to integer mode
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+-- note: fitType='parametric', but the dispersion trend was not well captured by the
+   function: y = a/x + b, and a local regression fit was automatically substituted.
+   specify fitType='local' or 'mean' to avoid this message next time.
+final dispersion estimates
+fitting model and testing
+-- replacing outliers and refitting for 54 genes
+-- DESeq argument 'minReplicatesForReplace' = 7 
+-- original counts are preserved in counts(dds)
+estimating dispersions
+fitting model and testing
+null device 
+          1 
+✅ DESeq2 analysis complete. Files saved as:
+   • /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2_deseq2_Dieta.csv
+   • /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2_MAplot.pdf
+[Mon Jul 28 03:50:34 2025]
+Finished jobid: 7 (Rule: deseq2)
+5 of 6 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jul 28 03:50:34 2025]
+localrule all:
+    input: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/FastQC/manifest.tsv, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Metadata/metadata.tsv, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/.sentinel.fastp, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/.sentinel.kraken2, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/.sentinel.bracken, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken/.sentinel.merge_bracken, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2/.sentinel.deseq2
+    jobid: 0
+    reason: Input files updated by another job: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken/.sentinel.merge_bracken, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/.sentinel.fastp, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/.sentinel.kraken2, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2/.sentinel.deseq2, /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/.sentinel.bracken
+    resources: tmpdir=/tmp
+[Mon Jul 28 03:50:34 2025]
+Finished jobid: 0 (Rule: all)
+6 of 6 steps (100%) done
+Complete log(s): /media/Disco9/jpereira/kraken_snake/.snakemake/log/2025-07-28T021539.401272.snakemake.log
+D_PATH: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data
+V_PATH: /media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Visuals
+
+Printing final files:
+/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/FastQC/manifest.tsv
+/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Metadata/metadata.tsv
+/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/Fastp/.sentinel.fastp
+/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/kraken2/.sentinel.kraken2
+/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/bracken/.sentinel.bracken
+/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/merge_bracken/.sentinel.merge_bracken
+/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/deseq2/.sentinel.deseq2
+metadata_validation rule inputs:
+/media/Disco9/jpereira/kraken_snake/metadata/metadata_metag_2025-4-10.csv
+/media/Disco11/pperaza/pperaza/pperaza-novogene/metagem_data/dataset/
+/media/Disco11/pperaza/pperaza/Results/kraken_snake/MG1/Data/FastQC/manifest.tsv

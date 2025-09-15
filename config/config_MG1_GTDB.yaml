@@ -1,0 +1,53 @@
+########################################################
+###### Config file for Kraken2 snakemake pipeline ######
+########################################################
+
+# Input FASTQ samples dir
+samples.Dir: /home/pperaza/NOVOGENE/MG/20240711_Respaldo_Pablo/01.RawData/
+metadata.File: /home/jpereira/kraken_snake/metadata/metadata_metag_2025-4-10.csv
+results.Dir: /home/jpereira/Results/kraken_snake/MG1_subsample
+
+#Fastqc Analysis
+fastqc_analysis.rule: True
+fastqc_analysis_paired.threads: 3
+
+#Metadata validation
+metadata_validation.rule : True
+metadata_validation.file_separator: '\t'
+metadata_validation.sample_id_column:  'LABID'
+metadata_validation.fill_nan_values: 'median'
+metadata_validation.paired: True
+
+#Fastp
+fastp.rule: True
+fastp.threads_fastp: 3
+fastp.jobs: 10
+fastp.subsample: 20000000
+
+#kraken2
+kraken2.rule: True
+kraken2.threads: 3
+#kraken2.kraken2_db: "/home/pperaza/NOVOGENE/db/"
+kraken2.kraken2_db: "/home/pperaza/RRS/db/"
+
+#Bracken
+bracken.rule: True
+bracken.bracken_db: /home/jpereira/kraken_snake/kraken_db/db # Shoulb be inside a Kraken DataBase
+bracken.read_length: 150
+bracken.level: S
+bracken.kraken_db_kmer: 35
+bracken.threads: 3
+
+#Merge Bracken
+merge_bracken.rule: True
+merge_bracken.level: 'S'
+merge_bracken.metrics:
+  - fraction_total_reads
+  - new_est_reads
+
+#DeSEQ2
+deseq2.rule: True
+deseq2.bracken_metric: 'new_est_reads'
+deseq2.bracken_level: 'S'
+deseq2.condition: 'Dieta'
+deseq2.batch: ''

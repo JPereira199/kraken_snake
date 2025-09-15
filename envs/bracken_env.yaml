@@ -1,0 +1,9 @@
+name: bracken_env
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - bracken
+  - python=3.10
+  - kraken2  # Required for database compatibility and utilities

@@ -1,0 +1,15 @@
+name: cluster-vis-env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.11
+  - scikit-bio
+  - scikit-learn
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - jupyter
+  - ipykernel
