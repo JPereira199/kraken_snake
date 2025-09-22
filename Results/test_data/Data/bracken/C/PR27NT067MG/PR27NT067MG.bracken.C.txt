@@ -1,0 +1,14 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Bacteroidia	4	C	302	0	302	0.56767
+Clostridia	10	C	109	0	109	0.20489
+Clostridia_A	69	C	8	0	8	0.01504
+Gammaproteobacteria	390	C	67	0	67	0.12594
+Alphaproteobacteria	55	C	6	0	6	0.01128
+Bacilli	16	C	14	0	14	0.02632
+Negativicutes	89	C	8	0	8	0.01504
+Vampirovibrionia	177	C	6	0	6	0.01128
+Xenobia	687	C	4	0	4	0.00752
+Kiritimatiellae	80	C	3	0	3	0.00564
+Fibrobacteria	235	C	2	0	2	0.00376
+Elusimicrobia	258	C	1	0	1	0.00188
+Methanobacteria	171	C	2	0	2	0.00376

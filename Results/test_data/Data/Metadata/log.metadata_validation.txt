@@ -1,0 +1,31 @@
+2025-09-22 11:30:37,485 - WARNING - Warning: Column delimiter provided by the user '\t' does not match the one automatically detected '	'
+2025-09-22 11:30:37,494 - INFO - No comment rows detected
+2025-09-22 11:30:37,494 - INFO - No subtitle row detected
+2025-09-22 11:30:37,495 - INFO - Adding subtitles to the first row:
+2025-09-22 11:30:37,495 - INFO - Adding 'numeric' subtitle to column: EID
+2025-09-22 11:30:37,496 - INFO - Adding 'numeric' subtitle to column: Prueba
+2025-09-22 11:30:37,496 - INFO - Adding 'categorical' subtitle to column: Dieta
+2025-09-22 11:30:37,496 - INFO - Adding 'categorical' subtitle to column: Categoria
+2025-09-22 11:30:37,496 - INFO - Adding 'numeric' subtitle to column: Anio
+2025-09-22 11:30:37,497 - INFO - Adding 'categorical' subtitle to column: Corral
+2025-09-22 11:30:37,497 - INFO - Adding 'numeric' subtitle to column: CARAVANA
+2025-09-22 11:30:37,497 - INFO - Adding 'numeric' subtitle to column: RP
+2025-09-22 11:30:37,497 - INFO - Adding 'numeric' subtitle to column: DMI_tot_Mean
+2025-09-22 11:30:37,498 - INFO - Adding 'numeric' subtitle to column: slope
+2025-09-22 11:30:37,498 - INFO - Adding 'numeric' subtitle to column: promPesos
+2025-09-22 11:30:37,498 - INFO - Adding 'numeric' subtitle to column: metPMP
+2025-09-22 11:30:37,499 - INFO - Adding 'numeric' subtitle to column: EG_fin
+2025-09-22 11:30:37,499 - INFO - Adding 'numeric' subtitle to column: residuo_T
+2025-09-22 11:30:37,499 - INFO - Adding 'categorical' subtitle to column: Pheno_RFI_medioSD
+2025-09-22 11:30:37,499 - INFO - Adding 'numeric' subtitle to column: RA_DMP
+2025-09-22 11:30:37,500 - INFO - Adding 'numeric' subtitle to column: Vis
+2025-09-22 11:30:37,500 - INFO - Adding 'numeric' subtitle to column: Days
+2025-09-22 11:30:37,500 - INFO - Adding 'numeric' subtitle to column: MeI_BW
+2025-09-22 11:30:37,500 - INFO - Adding 'numeric' subtitle to column: MeI_ADG
+2025-09-22 11:30:37,501 - INFO - Adding 'numeric' subtitle to column: MeY_DMI
+2025-09-22 11:30:37,501 - INFO - Adding 'categorical' subtitle to column: Pheno_MeY
+2025-09-22 11:30:37,501 - INFO - Adding 'numeric' subtitle to column: Ym_IPCC
+2025-09-22 11:30:37,503 - WARNING - param_paired = True: Checking if each sample-id corresponds to a directory in the input samples directory.
+2025-09-22 11:30:37,503 - WARNING - Manifest file checking will be skipped for paired-end data.
+2025-09-22 11:30:37,507 - INFO - Saving metadata file in: /home/jpereira/kraken_snake/Results/test_data/Data/Metadata/metadata.tsv
+2025-09-22 11:30:37,513 - INFO - Saving metadata file in html format in: /home/jpereira/kraken_snake/Results/test_data/Report/Metadata/index.html

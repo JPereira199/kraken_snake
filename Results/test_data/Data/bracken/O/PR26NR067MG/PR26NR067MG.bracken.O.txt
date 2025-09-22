@@ -1,0 +1,17 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Enterobacterales	391	O	329	4	333	0.47167
+RF32	131	O	2	0	2	0.00283
+Bacteroidales	5	O	272	0	272	0.38527
+Lachnospirales	11	O	41	0	41	0.05807
+Oscillospirales	25	O	19	0	19	0.02691
+Saccharofermentanales	118	O	7	0	7	0.00992
+Christensenellales	70	O	6	0	6	0.00850
+Selenomonadales	90	O	7	0	7	0.00992
+Acidaminococcales	250	O	3	0	3	0.00425
+RFN20	112	O	2	0	2	0.00283
+RF39	17	O	1	0	1	0.00142
+Coriobacteriales	108	O	2	0	2	0.00283
+Mycobacteriales	558	O	1	0	1	0.00142
+RFP12	81	O	2	0	2	0.00283
+Gastranaerophilales	178	O	1	0	1	0.00142
+Methanobacteriales	172	O	6	0	6	0.00850

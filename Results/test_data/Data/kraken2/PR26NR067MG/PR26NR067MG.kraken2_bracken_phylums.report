@@ -1,0 +1,12 @@
+100.00	706	0	R	1	root
+99.15	700	0	R1	2	  Bacteria
+47.48	335	0	P	54	    Proteobacteria
+38.61	272	0	P	3	    Bacteroidota
+10.36	73	0	P	9	    Firmicutes_A
+1.43	10	0	P	88	    Firmicutes_C
+0.43	3	0	P	106	    Actinobacteriota
+0.43	3	0	P	15	    Firmicutes
+0.28	2	0	P	79	    Verrucomicrobiota
+0.14	1	0	P	176	    Cyanobacteria
+0.85	6	0	R1	169	  Archaea
+0.85	6	0	P	170	    Methanobacteriota

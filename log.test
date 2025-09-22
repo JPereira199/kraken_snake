@@ -1,0 +1,106 @@
+Support for alternative conda frontends has been deprecated in favor of simpler support and code base. This should not cause issues since current conda releases rely on fast solving via libmamba. Ignoring the alternative conda frontend setting (mamba).
+Assuming unrestricted shared filesystem usage.
+host: bioserver
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Creating conda environment envs/qc_env.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/jpereira/kraken_snake/envs/qc_env.yaml created (location: .snakemake/conda/7bd21fceef9afd815dc44c304db7874d_)
+Creating conda environment envs/bracken_env.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/jpereira/kraken_snake/envs/bracken_env.yaml created (location: .snakemake/conda/8b92e83214a6c750785512caf83a6dba_)
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count
+----------------------  -------
+all                           1
+bracken                       6
+fastp                         1
+fastqc_analysis_paired        1
+kraken2                       1
+merge_bracken                 6
+metadata_validation           1
+total                        17
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 17 18:17:26 2025]
+localrule fastp:
+    input: /home/jpereira/kraken_snake/scripts/fastp_subsample_parallel_jobs.py, /home/jpereira/kraken_snake/test_data
+    output: /home/jpereira/kraken_snake/Results/test_data/Data/Fastp, /home/jpereira/kraken_snake/Results/test_data/Data/Fastp/.sentinel.fastp
+    log: logs/fastp.log
+    jobid: 3
+    reason: Missing output files: /home/jpereira/kraken_snake/Results/test_data/Data/Fastp, /home/jpereira/kraken_snake/Results/test_data/Data/Fastp/.sentinel.fastp
+    threads: 10
+    resources: tmpdir=/tmp
+Activating conda environment: .snakemake/conda/e6c63f7072144950ee52a4509ad4a58c_
+RuleException:
+CalledProcessError in file "/home/jpereira/kraken_snake/Snakefile", line 150:
+Command 'source /home/jpereira/miniconda3/bin/activate '/home/jpereira/kraken_snake/.snakemake/conda/e6c63f7072144950ee52a4509ad4a58c_'; set -euo pipefail;  
+        python3 /home/jpereira/kraken_snake/scripts/fastp_subsample_parallel_jobs.py             --input-raw-dir /home/jpereira/kraken_snake/test_data             --params-subsample 1000             --output-dir /home/jpereira/kraken_snake/Results/test_data/Data/Fastp             --threads 10             > logs/fastp.log 2>&1
+
+        touch /home/jpereira/kraken_snake/Results/test_data/Data/Fastp/.sentinel.fastp' returned non-zero exit status 1.
+[Wed Sep 17 18:17:26 2025]
+Error in rule fastp:
+    message: None
+    jobid: 3
+    input: /home/jpereira/kraken_snake/scripts/fastp_subsample_parallel_jobs.py, /home/jpereira/kraken_snake/test_data
+    output: /home/jpereira/kraken_snake/Results/test_data/Data/Fastp, /home/jpereira/kraken_snake/Results/test_data/Data/Fastp/.sentinel.fastp
+    log: logs/fastp.log (check log file(s) for error details)
+    conda-env: /home/jpereira/kraken_snake/.snakemake/conda/e6c63f7072144950ee52a4509ad4a58c_
+    shell:
+        
+        python3 /home/jpereira/kraken_snake/scripts/fastp_subsample_parallel_jobs.py             --input-raw-dir /home/jpereira/kraken_snake/test_data             --params-subsample 1000             --output-dir /home/jpereira/kraken_snake/Results/test_data/Data/Fastp             --threads 10             > logs/fastp.log 2>&1
+
+        touch /home/jpereira/kraken_snake/Results/test_data/Data/Fastp/.sentinel.fastp 
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job fastp since they might be corrupted:
+/home/jpereira/kraken_snake/Results/test_data/Data/Fastp
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed Sep 17 18:17:26 2025]
+Error in rule fastp:
+    message: None
+    jobid: 3
+    input: /home/jpereira/kraken_snake/scripts/fastp_subsample_parallel_jobs.py, /home/jpereira/kraken_snake/test_data
+    output: /home/jpereira/kraken_snake/Results/test_data/Data/Fastp, /home/jpereira/kraken_snake/Results/test_data/Data/Fastp/.sentinel.fastp
+    log: logs/fastp.log (check log file(s) for error details)
+    conda-env: /home/jpereira/kraken_snake/.snakemake/conda/e6c63f7072144950ee52a4509ad4a58c_
+    shell:
+        
+        python3 /home/jpereira/kraken_snake/scripts/fastp_subsample_parallel_jobs.py             --input-raw-dir /home/jpereira/kraken_snake/test_data             --params-subsample 1000             --output-dir /home/jpereira/kraken_snake/Results/test_data/Data/Fastp             --threads 10             > logs/fastp.log 2>&1
+
+        touch /home/jpereira/kraken_snake/Results/test_data/Data/Fastp/.sentinel.fastp 
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/jpereira/kraken_snake/.snakemake/log/2025-09-17T175258.882527.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
+D_PATH: /home/jpereira/kraken_snake/Results/test_data/Data
+V_PATH: /home/jpereira/kraken_snake/Results/test_data/Visuals
+LEVELS: ['S', 'G', 'F', 'O', 'C', 'P']
+{'fastqc_analysis.rule': ('/home/jpereira/kraken_snake/Results/test_data/Data', 'FastQC', 'manifest.tsv'), 'metadata_validation.rule': ('/home/jpereira/kraken_snake/Results/test_data/Data', 'Metadata', 'metadata.tsv'), 'fastp.rule': ('/home/jpereira/kraken_snake/Results/test_data/Data', 'Fastp', '.sentinel.fastp'), 'kraken2.rule': ('/home/jpereira/kraken_snake/Results/test_data/Data', 'kraken2', '.sentinel.kraken2'), 'bracken.rule': [('/home/jpereira/kraken_snake/Results/test_data/Data', 'bracken', 'S', '.sentinel.bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'bracken', 'G', '.sentinel.bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'bracken', 'F', '.sentinel.bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'bracken', 'O', '.sentinel.bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'bracken', 'C', '.sentinel.bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'bracken', 'P', '.sentinel.bracken')], 'merge_bracken.rule': [('/home/jpereira/kraken_snake/Results/test_data/Data', 'merge_bracken', 'S', '.sentinel.merge_bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'merge_bracken', 'G', '.sentinel.merge_bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'merge_bracken', 'F', '.sentinel.merge_bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'merge_bracken', 'O', '.sentinel.merge_bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'merge_bracken', 'C', '.sentinel.merge_bracken'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'merge_bracken', 'P', '.sentinel.merge_bracken')], 'deseq2.rule': [('/home/jpereira/kraken_snake/Results/test_data/Data', 'deseq2', 'S', '.sentinel.deseq2'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'deseq2', 'G', '.sentinel.deseq2'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'deseq2', 'F', '.sentinel.deseq2'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'deseq2', 'O', '.sentinel.deseq2'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'deseq2', 'C', '.sentinel.deseq2'), ('/home/jpereira/kraken_snake/Results/test_data/Data', 'deseq2', 'P', '.sentinel.deseq2')]}
+
+Printing final files:
+/home/jpereira/kraken_snake/Results/test_data/Data/FastQC/manifest.tsv
+/home/jpereira/kraken_snake/Results/test_data/Data/Metadata/metadata.tsv
+/home/jpereira/kraken_snake/Results/test_data/Data/Fastp/.sentinel.fastp
+/home/jpereira/kraken_snake/Results/test_data/Data/kraken2/.sentinel.kraken2
+/home/jpereira/kraken_snake/Results/test_data/Data/bracken/S/.sentinel.bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/bracken/G/.sentinel.bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/bracken/F/.sentinel.bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/bracken/O/.sentinel.bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/bracken/C/.sentinel.bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/bracken/P/.sentinel.bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/merge_bracken/S/.sentinel.merge_bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/merge_bracken/G/.sentinel.merge_bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/merge_bracken/F/.sentinel.merge_bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/merge_bracken/O/.sentinel.merge_bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/merge_bracken/C/.sentinel.merge_bracken
+/home/jpereira/kraken_snake/Results/test_data/Data/merge_bracken/P/.sentinel.merge_bracken

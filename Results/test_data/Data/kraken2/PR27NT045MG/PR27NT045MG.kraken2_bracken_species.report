@@ -1,0 +1,267 @@
+100.00	524	0	R	1	root
+98.47	516	0	R1	2	  Bacteria
+60.91	319	0	P	3	    Bacteroidota
+60.91	319	0	C	4	      Bacteroidia
+60.91	319	0	O	5	        Bacteroidales
+53.80	281	0	F	6	          Bacteroidaceae
+48.77	255	0	G	7	            Prevotella
+5.20	27	27	S	2979	              Prevotella sp902799765
+3.33	17	17	S	2518	              Prevotella sp900315775
+2.55	13	13	S	1256	              Prevotella sp900314995
+2.18	11	11	S	1388	              Prevotella sp902782305
+2.21	11	11	S	3304	              Prevotella sp900315695
+1.98	10	10	S	3440	              Prevotella sp902801375
+1.72	9	9	S	2720	              Prevotella sp900316565
+1.83	9	9	S	3233	              Prevotella sp900319305
+1.37	7	7	S	1911	              Prevotella sp902763615
+1.43	7	7	S	1407	              Prevotella sp900317685
+1.18	6	6	S	713	              Prevotella sp902800585
+1.27	6	6	S	2408	              Prevotella sp902800185
+1.15	6	6	S	1944	              Prevotella sp902784065
+0.97	5	5	S	2471	              Prevotella sp900316285
+0.96	5	5	S	3106	              MGYG000294794
+1.00	5	5	S	1512	              Prevotella sp900318795
+1.02	5	5	S	2565	              Prevotella ruminicola
+0.83	4	4	S	2507	              Prevotella sp002481295
+0.79	4	4	S	1819	              Prevotella sp902792685
+0.59	3	3	S	389	              Prevotella sp900318395
+0.60	3	3	S	1926	              Prevotella sp902776935
+0.59	3	3	S	1774	              Prevotella sp900315955
+0.65	3	3	S	1600	              Prevotella sp902800365
+0.58	3	3	S	2231	              Prevotella sp902768105
+0.58	3	3	S	74	              Prevotella sp902794405
+0.60	3	3	S	2269	              Prevotella sp900314755
+0.39	2	2	S	2807	              Prevotella sp900315095
+0.40	2	2	S	2711	              Prevotella sp900314945
+0.39	2	2	S	833	              Prevotella sp900316645
+0.38	2	2	S	3078	              Prevotella sp902778535
+0.39	2	2	S	2758	              Prevotella sp902785945
+0.39	2	2	S	962	              Prevotella sp902784755
+0.41	2	2	S	2695	              Prevotella sp002350355
+0.44	2	2	S	2660	              Prevotella sp002351725
+0.39	2	2	S	565	              Prevotella sp902769805
+0.41	2	2	S	2322	              Prevotella sp900322035
+0.39	2	2	S	1310	              Prevotella sp902799905
+0.39	2	2	S	1335	              Prevotella sp902770195
+0.39	2	2	S	1543	              Prevotella sp902800595
+0.39	2	2	S	1667	              Prevotella sp902770635
+0.39	2	2	S	1695	              Prevotella sp902778255
+0.42	2	2	S	1724	              MGYG000292386
+0.38	2	2	S	3469	              Prevotella bryantii
+0.39	2	2	S	2982	              Prevotella sp002354095
+0.20	1	1	S	3097	              Prevotella sp902799355
+0.20	1	1	S	1866	              Prevotella sp900322095
+0.19	1	1	S	898	              MGYG000291038
+0.19	1	1	S	3529	              Prevotella sp900314455
+0.20	1	1	S	1022	              Prevotella sp902784565
+0.20	1	1	S	1169	              Prevotella sp902761905
+0.20	1	1	S	998	              Prevotella sp900316985
+0.19	1	1	S	528	              MGYG000290544
+0.19	1	1	S	1815	              Prevotella sp900319715
+0.20	1	1	S	2323	              Prevotella sp900316265
+0.19	1	1	S	3296	              Prevotella sp002391185
+0.20	1	1	S	3085	              Prevotella sp902761605
+0.20	1	1	S	1785	              Prevotella sp900315835
+0.21	1	1	S	1323	              Prevotella sp902765585
+0.21	1	1	S	3422	              Prevotella sp902774925
+0.20	1	1	S	2009	              Prevotella sp902798425
+0.19	1	1	S	1384	              Prevotella sp902784615
+0.19	1	1	S	831	              Prevotella sp902779745
+0.20	1	1	S	1442	              Prevotella sp902762325
+0.19	1	1	S	1461	              Prevotella sp900314935
+0.20	1	1	S	1473	              Prevotella sp902799455
+0.19	1	1	S	2223	              Prevotella sp900316685
+0.19	1	1	S	3372	              Prevotella sp900315035
+2.31	12	0	G	183	            UBA4372
+0.96	5	5	S	805	              MGYG000290926
+0.59	3	3	S	2236	              UBA4372 sp900320565
+0.38	2	2	S	1677	              UBA4372 sp902776455
+0.19	1	1	S	1463	              MGYG000291960
+0.19	1	1	S	1709	              UBA4372 sp902775385
+2.13	11	0	G	1138	            UBA2918
+1.36	7	7	S	2522	              UBA2918 sp900313715
+0.58	3	3	S	1914	              UBA2918 sp002349865
+0.19	1	1	S	3182	              MGYG000294921
+0.58	3	0	G	672	            UBA6398
+0.58	3	3	S	673	              UBA6398 sp900314335
+4.02	21	0	F	85	          Paludibacteraceae
+4.02	21	0	G	86	            RF16
+2.14	11	11	S	2961	              RF16 sp900319035
+1.07	5	5	S	1024	              RF16 sp900321605
+0.39	2	2	S	2779	              RF16 sp900319645
+0.21	1	1	S	671	              RF16 sp902799875
+0.20	1	1	S	1198	              RF16 sp900317745
+2.11	11	0	F	33	          UBA932
+1.73	9	0	G	34	            RC9
+0.57	3	3	S	96	              RC9 sp900320185
+0.39	2	2	S	1873	              RC9 sp900317925
+0.19	1	1	S	1127	              RC9 sp902789395
+0.19	1	1	S	1878	              RC9 sp902801885
+0.19	1	1	S	1983	              RC9 sp900319855
+0.19	1	1	S	1324	              RC9 sp902762655
+0.38	2	0	G	456	            UBA1232
+0.19	1	1	S	1801	              UBA1232 sp900316795
+0.19	1	1	S	1316	              UBA1232 sp002309115
+0.39	2	0	F	161	          Muribaculaceae
+0.39	2	0	G	162	            Sodaliphilus
+0.20	1	1	S	1002	              Sodaliphilus sp902776435
+0.19	1	1	S	438	              Sodaliphilus sp900316835
+0.21	1	0	F	231	          WCHB1-69
+0.21	1	0	G	232	            F23-D06
+0.21	1	1	S	233	              F23-D06 sp902771655
+0.19	1	0	F	216	          P3
+0.19	1	0	G	586	            Phil12
+0.19	1	1	S	3476	              Phil12 sp900314725
+0.19	1	0	F	298	          F082
+0.19	1	0	G	299	            F082
+0.19	1	1	S	736	              F082 sp900317155
+19.40	101	0	P	54	    Proteobacteria
+19.40	101	0	C	390	      Gammaproteobacteria
+19.40	101	0	O	391	        Enterobacterales
+19.40	101	0	F	392	          Succinivibrionaceae
+10.70	56	0	G	393	            Succinivibrio
+7.40	38	38	S	1488	              Succinivibrio sp900315395
+0.96	5	5	S	1453	              Succinivibrio sp900316375
+0.99	5	5	S	394	              Succinivibrio sp002449335
+0.78	4	4	S	588	              Succinivibrio sp000431835
+0.38	2	2	S	1328	              Succinivibrio sp900316175
+0.19	1	1	S	2086	              Succinivibrio sp002473165
+8.51	44	0	G	3243	            UBA2810
+5.59	29	29	S	3433	              UBA2810 sp900317945
+2.91	15	15	S	3244	              UBA2810 sp002351705
+0.19	1	0	G	1163	            Ruminobacter
+0.19	1	1	S	1164	              Ruminobacter sp900315145
+13.76	72	0	P	9	    Firmicutes_A
+13.56	71	0	C	10	      Clostridia
+10.12	53	0	O	11	        Lachnospirales
+10.12	53	0	F	12	          Lachnospiraceae
+3.25	17	0	G	194	            CAG-791
+1.91	10	10	S	3388	              CAG-791 sp900320325
+0.38	2	2	S	2727	              CAG-791 sp900101015
+0.38	2	2	S	1130	              CAG-791 sp900317475
+0.19	1	1	S	1662	              CAG-791 sp900321785
+0.19	1	1	S	1144	              CAG-791 sp900320335
+0.19	1	1	S	956	              CAG-791 sp902789735
+2.10	11	0	G	104	            UBA2856
+1.34	7	7	S	153	              UBA2856 sp902800805
+0.38	2	2	S	2844	              UBA2856 sp902779575
+0.19	1	1	S	2177	              UBA2856 sp009696445
+0.19	1	1	S	2892	              UBA2856 sp900321365
+1.53	8	0	G	129	            CAG-603
+1.53	8	8	S	502	              CAG-603 sp900314525
+0.96	5	0	G	266	            UBA1066
+0.19	1	1	S	2625	              UBA1066 sp900320615
+0.19	1	1	S	1531	              UBA1066 sp900317045
+0.19	1	1	S	3165	              UBA1066 sp902776305
+0.19	1	1	S	1334	              UBA1066 sp900320575
+0.19	1	1	S	3417	              UBA1066 sp902783935
+0.57	3	0	G	1828	            RUG115
+0.57	3	3	S	1829	              RUG115 sp900315735
+0.38	2	0	G	909	            CAG-411
+0.19	1	1	S	2879	              CAG-411 sp902795895
+0.19	1	1	S	910	              CAG-411 sp902786205
+0.38	2	0	G	599	            Agathobacter
+0.19	1	1	S	1159	              Agathobacter faecis
+0.19	1	1	S	600	              Agathobacter sp900552085
+0.38	2	0	G	142	            Eubacterium_Q
+0.38	2	2	S	1307	              Eubacterium_Q sp902776395
+0.38	2	0	G	725	            Weimerbacter
+0.38	2	2	S	1053	              Weimerbacter sp900315505
+0.19	1	0	G	380	            Clostridium_R
+0.19	1	1	S	381	              Clostridium_R sp900321915
+3.06	16	0	O	25	        Oscillospirales
+1.91	10	0	F	26	          Acutalibacteraceae
+1.15	6	0	G	48	            Ruminococcus_E
+0.95	5	5	S	749	              Ruminococcus_E sp900319655
+0.19	1	1	S	1901	              Ruminococcus_E sp900313895
+0.38	2	0	G	766	            RUG420
+0.38	2	2	S	2174	              RUG420 sp900315285
+0.19	1	0	G	94	            UBA1213
+0.19	1	1	S	1960	              UBA1213 sp902778175
+0.19	1	0	G	637	            RUG714
+0.19	1	1	S	3337	              MGYG000295212
+1.15	6	0	F	39	          Oscillospiraceae
+0.39	2	0	G	196	            UBA1777
+0.19	1	1	S	845	              UBA1777 sp900319695
+0.19	1	1	S	2336	              MGYG000293415
+0.30	1	0	G	2466	            NK3B98
+0.30	1	1	S	2467	              NK3B98 sp900314485
+0.24	1	0	G	2167	            Evtepia
+0.24	1	1	S	3310	              MGYG000295153
+0.22	1	0	G	384	            UBA738
+0.22	1	1	S	769	              MGYG000290865
+0.19	1	0	O	42	        Peptostreptococcales
+0.19	1	0	F	43	          Anaerovoracaceae
+0.19	1	0	G	44	            RUG099
+0.19	1	1	S	2728	              RUG099 sp902790965
+0.19	1	0	O	118	        Saccharofermentanales
+0.19	1	0	F	119	          Saccharofermentanaceae
+0.19	1	0	G	120	            Saccharofermentans
+0.19	1	1	S	2451	              MGYG000293644
+0.19	1	0	C	69	      Clostridia_A
+0.19	1	0	O	70	        Christensenellales
+0.19	1	0	F	71	          CAG-138
+0.19	1	0	G	72	            RUG472
+0.19	1	1	S	3302	              MGYG000295145
+2.11	11	0	P	88	    Firmicutes_C
+2.11	11	0	C	89	      Negativicutes
+1.34	7	0	O	90	        Selenomonadales
+1.34	7	0	F	91	          Selenomonadaceae
+0.96	5	0	G	3285	            Selenomonas_B
+0.96	5	5	S	3286	              Selenomonas_B ruminantium_B
+0.38	2	0	G	2875	            Selenomonas_C
+0.38	2	2	S	3131	              Selenomonas_C bovis
+0.77	4	0	O	250	        Acidaminococcales
+0.77	4	0	F	251	          Acidaminococcaceae
+0.77	4	0	G	252	            Succiniclasticum
+0.77	4	4	S	3028	              Succiniclasticum sp900315925
+1.15	6	0	P	176	    Cyanobacteria
+1.15	6	0	C	177	      Vampirovibrionia
+1.15	6	0	O	178	        Gastranaerophilales
+1.15	6	0	F	179	          Gastranaerophilaceae
+0.77	4	0	G	180	            UBA2813
+0.77	4	4	S	991	              UBA2813 sp902774905
+0.39	2	0	G	270	            CAG-196
+0.20	1	1	S	2127	              CAG-196 sp902760905
+0.19	1	1	S	1728	              MGYG000292392
+0.38	2	0	P	106	    Actinobacteriota
+0.19	1	0	C	557	      Actinomycetia
+0.19	1	0	O	1526	        Actinomycetales
+0.19	1	0	F	1527	          Bifidobacteriaceae
+0.19	1	0	G	2111	            Bifidobacterium
+0.19	1	1	S	3466	              Bifidobacterium globosum
+0.19	1	0	C	107	      Coriobacteriia
+0.19	1	0	O	108	        Coriobacteriales
+0.19	1	0	F	109	          Atopobiaceae
+0.19	1	0	G	523	            UBA7748
+0.19	1	1	S	524	              UBA7748 sp900314535
+0.38	2	0	P	79	    Verrucomicrobiota
+0.38	2	0	C	80	      Kiritimatiellae
+0.38	2	0	O	81	        RFP12
+0.38	2	0	F	281	          UBA1067
+0.19	1	0	G	322	            UBA1067
+0.19	1	1	S	3447	              UBA1067 sp902801025
+0.19	1	0	G	403	            RUG572
+0.19	1	1	S	2774	              RUG572 sp900320225
+0.19	1	0	P	155	    Spirochaetota
+0.19	1	0	C	156	      Spirochaetia
+0.19	1	0	O	157	        Treponematales
+0.19	1	0	F	158	          Treponemataceae
+0.19	1	0	G	159	            Treponema_D
+0.19	1	1	S	1513	              Treponema_D sp902789325
+0.19	1	0	P	15	    Firmicutes
+0.19	1	0	C	16	      Bacilli
+0.19	1	0	O	29	        Erysipelotrichales
+0.19	1	0	F	854	          Erysipelatoclostridiaceae
+0.19	1	0	G	2804	            Sharpea
+0.19	1	1	S	2805	              Sharpea azabuensis
+1.53	8	0	R1	169	  Archaea
+1.53	8	0	P	170	    Methanobacteriota
+1.53	8	0	C	171	      Methanobacteria
+1.53	8	0	O	172	        Methanobacteriales
+1.53	8	0	F	173	          Methanobacteriaceae
+0.76	4	0	G	463	            Methanobrevibacter
+0.76	4	4	S	1818	              Methanobrevibacter sp902784195
+0.76	3	0	G	174	            Methanobrevibacter_A
+0.22	1	1	S	2135	              Methanobrevibacter_A sp902789505
+0.54	2	2	S	2502	              Methanobrevibacter_A sp900320955

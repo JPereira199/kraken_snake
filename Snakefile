@@ -16,7 +16,7 @@ W_PATH = os.path.join(R_PATH, "Results")
 print(f"D_PATH: {D_PATH}")
 print(f"V_PATH: {V_PATH}")
 
-for path_dir in [RESULTS_P, D_PATH, V_PATH]:
+for path_dir in [RESULTS_P, D_PATH, V_PATH, R_PATH, W_PATH]:
     os.makedirs(path_dir, exist_ok=True)
 
 # Input files
@@ -93,10 +93,11 @@ rule fastqc_analysis_paired:
             {output.Manifest} \
             {output.log_file}
         """
-print('metadata_validation rule inputs:')
-print(USER_METADATA)
-print(FASTQ_D)
-print(os.path.join(D_PATH,   FASTQC_D, "manifest.tsv"))
+#print('metadata_validation rule inputs:')
+#print(USER_METADATA)
+#print(FASTQ_D)
+#print(os.path.join(D_PATH,   FASTQC_D, "manifest.tsv"))
+
 rule metadata_validation:
     input:
         metadata_validation_py = os.path.join(S_PATH, 'metadata_validation_paired.py'),
@@ -163,7 +164,7 @@ rule kraken2:
         raw_dir    = rules.fastp.output.fastp_dir
     params:
         kraken2_db = config['kraken2.kraken2_db'],
-        memory_mapping = config['kraken2.memory_mapping']
+        minimum_hit_groups = config['kraken2.minimum_hit_groups']
     threads:
         config['kraken2.threads']
     output:
@@ -178,7 +179,7 @@ rule kraken2:
         python3 {input.kraken2_py} \
             --input-raw-dir {input.raw_dir} \
             --params-kraken2-db {params.kraken2_db} \
-            --params-memory-mapping {params.memory_mapping} \
+            --params-minimum-hit-groups {params.minimum_hit_groups} \
             --params-threads {threads} \
             --output-dir {output.kraken2_dir}
 
@@ -193,12 +194,13 @@ rule bracken:
         bracken_db     = config["bracken.bracken_db"],
         read_length    = config["bracken.read_length"],
         kraken_db_kmer = config["bracken.kraken_db_kmer"],
-    threads:
-        config["bracken.threads"]
+        threshold     = config["bracken.threshold"]    
     output:
         # separate output directory (and sentinel) per level
         bracken_dir      = directory(os.path.join(D_PATH, BRACKEN_D, "{level}")),
         sentinel_bracken = os.path.join(D_PATH, BRACKEN_D, "{level}", ".sentinel.bracken")
+    threads:
+        config['bracken.threads']
     log:
         "logs/bracken_{level}.log"
     conda:
@@ -211,44 +213,12 @@ rule bracken:
             --read-length {params.read_length} \
             --kraken-db-kmer {params.kraken_db_kmer} \
             --level {wildcards.level} \
+            --threshold {params.threshold} \
             --threads {threads} \
             --output-dir {output.bracken_dir} \
         &> {log}
         touch {output.sentinel_bracken}
         """
-
-
-#rule bracken:
-#    input:
-#        bracken_py     = os.path.join(S_PATH, 'bracken_estimation.py'),
-#        kraken_dir     = rules.kraken2.output.kraken2_dir
-#    params:
-#        bracken_db     = config['bracken.bracken_db'],
-#        read_length    = config['bracken.read_length'],
-#        level          = config['bracken.level'],
-#        kraken_db_kmer = config['bracken.kraken_db_kmer']
-#    threads:
-#        config['bracken.threads']
-#    output:
-#        bracken_dir      = directory(os.path.join(D_PATH, BRACKEN)),
-#        sentinel_bracken = os.path.join(D_PATH, BRACKEN, ".sentinel.bracken")
-#    log:
-#        "logs/bracken.log"
-#    conda:
-#        "envs/bracken_env.yaml"
-#    shell:
-#        """
-#        python3 {input.bracken_py} \
-#         --input-kraken-dir {input.kraken_dir} \
-#         --bracken-db {params.bracken_db} \
-#         --read-length {params.read_length} \
-#         --kraken-db-kmer {params.kraken_db_kmer} \
-#         --level {params.level} \
-#         --threads {threads} \
-#         --output-dir {output.bracken_dir} 
-#
-#        touch {output.sentinel_bracken}
-#        """
 
 metrics_str = " ".join(config['merge_bracken.metrics'])
 rule merge_bracken:

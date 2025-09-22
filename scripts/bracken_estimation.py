@@ -78,11 +78,18 @@ parser.add_argument(
     help="Taxonomic level for Bracken output (D=Domain, P=Phylum, C=Class, O=Order, F=Family, G=Genus, S=Species; default: S)"
 )
 parser.add_argument(
+    "--threshold",
+    type=int,
+    default=0,
+    help="Number of reads requiered PRIOR to estimate the abundace (default: 0)"
+)
+parser.add_argument(
     "--threads",
     type=int,
-    default=4,
-    help="Number of threads to use for Bracken (default: 4)"
+    default=10,
+    help="Number of threads used to build bracken database"
 )
+
 parser.add_argument(
     "--output-dir",
     required=True,
@@ -96,6 +103,7 @@ bracken_db = args.bracken_db
 read_length = args.read_length
 kraken_db_kmer = args.kraken_db_kmer
 tax_level = args.level
+threshold = args.threshold
 threads = args.threads
 output_dir = args.output_dir
 
@@ -167,8 +175,8 @@ for sample_dir in sorted(input_kraken_dir.iterdir()):
         "-i", str(report_file),
         "-o", str(bracken_out),
         "-r", str(read_length),
-        "-l", tax_level,
-        "-t", str(threads)
+        "-l", str(tax_level),
+        "-t", str(threshold)
     ]
 
     # Execute Bracken abundance estimation

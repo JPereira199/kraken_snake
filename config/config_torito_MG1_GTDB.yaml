@@ -29,7 +29,7 @@ kraken2.rule: True
 kraken2.threads: 2
 #kraken2.kraken2_db: "/home/pperaza/NOVOGENE/db/"
 kraken2.kraken2_db: "/mnt/Disk06/pperaza/pperaza/pperaza-novogene/MG2/kraken2_GTDB/"
-kraken2.memory_mapping: True
+kraken2.memory_mapping: False
 
 #Bracken
 bracken.rule: True

@@ -11,6 +11,7 @@ def run_command(cmd):
     result = subprocess.run(cmd, check=True)
     return result.returncode
 
+# Unused function but usefull to add booleans from the command line 
 def str2bool(v):
     if isinstance(v, bool):
         return v
@@ -26,14 +27,14 @@ parser = argparse.ArgumentParser(
     description="Run Kraken2 on a set of paired metagenomic samples")
 parser.add_argument("--input-raw-dir",required=True, type=Path, help="Parent folder containing one subdirectory per sample (each with _1 and _2 FASTQ files)")
 parser.add_argument("--params-kraken2-db",required=True,type=Path,help="Path to Kraken2 database")
-parser.add_argument("--params-memory-mapping",type=str2bool,default=False,help="Use 'True' to avoid loading DB into RAM (slower but uses less memory).")
+parser.add_argument("--params-minimum-hit-groups",default=2,type=int,help="Minimum number of superposed kmers in a read to asign a classification")
 parser.add_argument("--params-threads",type=int,default=8,help="Number of threads to use for Kraken2 (default: 8)")
 parser.add_argument("--output-dir",required=True,type=Path,help="Directory to write Kraken2 results (one subfolder per sample)")
 args = parser.parse_args()
 
 input_raw_dir = Path(args.input_raw_dir)
 kraken2_db = Path(args.params_kraken2_db)
-memory_mapping = args.params_memory_mapping
+minimum_hit_groups = args.params_minimum_hit_groups
 cpus = args.params_threads
 output_dir = Path(args.output_dir)
 
@@ -89,13 +90,11 @@ for sample_dir in sorted(input_raw_dir.iterdir()):
         "kraken2",
         "--db", str(kraken2_db),
         "--paired", str(r1), str(r2),
+        "--minimum-hit-groups", str(minimum_hit_groups),
         "--threads", str(cpus),
         "--report", str(report_file),
         "--output", str(output_file)
     ]
-
-    if memory_mapping:
-        kraken2_cmd.append("--memory-mapping")
 
     # Execute Kraken2
     try:

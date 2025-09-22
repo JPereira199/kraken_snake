@@ -3,9 +3,11 @@
 ########################################################
 
 # Input FASTQ samples dir
-samples.Dir: /media/Disco11/pperaza/pperaza/pperaza-novogene/toy_set
-metadata.File: /media/Disco9/jpereira/kraken_snake/metadata/toy_metadata.csv
-results.Dir: /media/Disco11/pperaza/pperaza/Results/kraken_snake/toy_set
+samples.Dir: /home/jpereira/kraken_snake/test_data/subsample_1k
+metadata.File: /home/jpereira/kraken_snake/metadata/metadata_metag_2025-4-10.csv
+results.Dir: /home/jpereira/kraken_snake/Results/test_data
+
+conda-frontend: mamba
 
 #Fastqc Analysis
 fastqc_analysis.rule: True
@@ -13,8 +15,8 @@ fastqc_analysis_paired.threads: 6
 
 #Metadata validation
 metadata_validation.rule : True
-metadata_validation.file_separator: ','
-metadata_validation.sample_id_column:  'sample-id'
+metadata_validation.file_separator: '\t'
+metadata_validation.sample_id_column:  'LABID'
 metadata_validation.fill_nan_values: 'median'
 metadata_validation.paired: True
 
@@ -22,31 +24,33 @@ metadata_validation.paired: True
 fastp.rule: True
 fastp.threads_fastp: 10
 fastp.jobs: 4
+fastp.subsample: 1000
+
 
 #kraken2
 kraken2.rule: True
-kraken2.threads: 10
-#kraken2.kraken2_db: "/home/pperaza/NOVOGENE/db/"
-kraken2.kraken2_db: "/home/pperaza/RRS/db/"
+kraken2.threads: 6
+kraken2.kraken2_db: "/home/jpereira/kraken2_db_cow-rumen_v1.0.1"
+kraken2.minimum_hit_groups: 2
 
 #Bracken
 bracken.rule: True
-bracken.bracken_db: /home/jpereira/kraken_snake/kraken_db/db
+bracken.bracken_db: "/home/jpereira/kraken2_db_cow-rumen_v1.0.1/" # Shoulb be inside a Kraken DataBase
 bracken.read_length: 150
-bracken.level: S
+bracken.levels: [S,G,F,O,C,P]
 bracken.kraken_db_kmer: 35
-bracken.threads: 50
+bracken.threshold: 1
+bracken.threads: 10
 
 #Merge Bracken
 merge_bracken.rule: True
-merge_bracken.level: 'S'
 merge_bracken.metrics:
   - fraction_total_reads
   - new_est_reads
 
 #DeSEQ2
-deseq2.rule: True
-deseq2.bracken_metric: 'fraction_total_reads'
-deseq2.bracken_level: 'S'
-deseq2.condition: 'group_col'
+deseq2.rule: False
+deseq2.bracken_metric: 'new_est_reads'
+#deseq2.bracken_level: 'S'
+deseq2.condition: 'Dieta'
 deseq2.batch: ''

@@ -1,0 +1,13 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Bacteroidota	3	P	219	0	219	0.55725
+Firmicutes_A	9	P	82	0	82	0.20865
+Fibrobacterota	234	P	33	0	33	0.08397
+Verrucomicrobiota	79	P	14	0	14	0.03562
+Cyanobacteria	176	P	13	0	13	0.03308
+Proteobacteria	54	P	8	0	8	0.02036
+Eremiobacterota	686	P	7	0	7	0.01781
+Firmicutes	15	P	6	0	6	0.01527
+Firmicutes_C	88	P	4	0	4	0.01018
+Actinobacteriota	106	P	1	0	1	0.00254
+Spirochaetota	155	P	1	0	1	0.00254
+Methanobacteriota	170	P	5	0	5	0.01272
