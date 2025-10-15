@@ -8,33 +8,34 @@ metadata.File: /home/jpereira/kraken_snake/metadata/MG2_metadata.csv
 results.Dir: /home/jpereira/Results/kraken_snake/MG2_20M
 
 #Fastqc Analysis
-fastqc_analysis.rule: True
+fastqc_analysis.rule: False
 fastqc_analysis_paired.threads: 5
 
 #Metadata validation
-metadata_validation.rule : True
+metadata_validation.rule : False
 metadata_validation.file_separator: ','
 metadata_validation.sample_id_column:  'Novogene-MG'
 metadata_validation.fill_nan_values: 'median'
 metadata_validation.paired: True
 
 #Fastp
-fastp.rule: True
+fastp.rule: False
 fastp.threads_fastp: 50
 fastp.jobs: 10
 fastp.subsample: 20000000
 
 #kraken2
-kraken2.rule: True
+kraken2.rule: False
 kraken2.threads: 40
 kraken2.kraken2_db: "/mnt/nas_bioinsumos/Kraken_dbs/GTDBv226"
 kraken2.minimum_hit_groups: 3
+kraken2.confidence: 0.3
 
 #Bracken
 bracken.rule: True
 bracken.bracken_db: "/mnt/nas_bioinsumos/Kraken_dbs/GTDBv226" # Shoulb be inside a Kraken DataBase
 bracken.read_length: 150 
-bracken.levels: [D,S,G,F,O,C,P]
+bracken.levels: [S,G,F,O,C,P]
 bracken.kraken_db_kmer: 50
 bracken.threshold: 10
 bracken.threads: 10

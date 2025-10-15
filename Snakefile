@@ -164,7 +164,8 @@ rule kraken2:
         raw_dir    = rules.fastp.output.fastp_dir
     params:
         kraken2_db = config['kraken2.kraken2_db'],
-        minimum_hit_groups = config['kraken2.minimum_hit_groups']
+        minimum_hit_groups = config['kraken2.minimum_hit_groups'],
+        confidence = config['kraken2.confidence']
     threads:
         config['kraken2.threads']
     output:
@@ -180,6 +181,7 @@ rule kraken2:
             --input-raw-dir {input.raw_dir} \
             --params-kraken2-db {params.kraken2_db} \
             --params-minimum-hit-groups {params.minimum_hit_groups} \
+            --params-confidence {params.confidence} \
             --params-threads {threads} \
             --output-dir {output.kraken2_dir}
 
