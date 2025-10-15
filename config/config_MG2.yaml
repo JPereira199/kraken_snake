@@ -3,9 +3,9 @@
 ########################################################
 
 # Input FASTQ samples dir
-samples.Dir: /home/pperaza/NOVOGENE/MG/20240711_Respaldo_Pablo/01.RawData/
-metadata.File: /home/jpereira/kraken_snake/metadata/metadata_metag_2025-4-10.csv
-results.Dir: /home/jpereira/Results/kraken_snake/MG1_cow_db/
+samples.Dir: /home/jpereira/MG2/01.RawData/
+metadata.File: /home/jpereira/kraken_snake/metadata/metadata.MG1_MG2.csv
+results.Dir: /home/jpereira/Results/kraken_snake/MG2_cow_db/
 conda-frontend: mamba
 
 #Fastqc Analysis
