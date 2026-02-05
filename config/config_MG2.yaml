@@ -13,7 +13,7 @@ fastqc_analysis.rule: True
 fastqc_analysis_paired.threads: 50
 
 #Metadata validation
-metadata_validation.rule : True
+metadata_validation.rule : False
 metadata_validation.file_separator: '\t'
 metadata_validation.sample_id_column:  'LABID'
 metadata_validation.fill_nan_values: 'median'
@@ -40,7 +40,7 @@ bracken.bracken_db: /home/jpereira/kraken2_db_cow-rumen_v1.0.1 # Shoulb be insid
 bracken.read_length: 150 
 bracken.levels: [S,G,F,O,C,P]
 bracken.kraken_db_kmer: 50
-bracken.threshold: 10
+bracken.threshold: 0
 bracken.threads: 10
 
 
@@ -51,7 +51,7 @@ merge_bracken.metrics:
 
 
 #DeSEQ2
-deseq2.rule: True
+deseq2.rule: False
 deseq2.bracken_metric: 'new_est_reads'
 deseq2.condition: 'Dieta'
 deseq2.batch: ''
